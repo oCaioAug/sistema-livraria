@@ -46,6 +46,7 @@
             // 
             // TxtId
             // 
+            TxtId.Enabled = false;
             TxtId.Location = new Point(29, 31);
             TxtId.MaxLength = 4;
             TxtId.Name = "TxtId";

@@ -71,18 +71,18 @@ namespace AulaAEDB.Windows
                 TxtNome.Focus();
                 return false;
             }
-            else if (TxtId.Text.Trim() == "")
-            {
-                MessageBox.Show("Campo é de preenchimento obrigatório!", ProductName, MessageBoxButtons.OK, MessageBoxIcon.Error);
-                TxtId.Focus();
-                return false;
-            }
-            else if (int.TryParse(TxtId.Text, out Id) == false)
-            {
-                MessageBox.Show("Código inválido", ProductName, MessageBoxButtons.OK, MessageBoxIcon.Error);
-                TxtId.Focus();
-                return false;
-            }
+            //else if (TxtId.Text.Trim() == "")
+            //{
+            //    MessageBox.Show("Campo é de preenchimento obrigatório!", ProductName, MessageBoxButtons.OK, MessageBoxIcon.Error);
+            //    TxtId.Focus();
+            //    return false;
+            //}
+            //else if (int.TryParse(TxtId.Text, out Id) == false)
+            //{
+            //    MessageBox.Show("Código inválido", ProductName, MessageBoxButtons.OK, MessageBoxIcon.Error);
+            //    TxtId.Focus();
+            //    return false;
+            //}
 
             return true;
         }
@@ -102,7 +102,7 @@ namespace AulaAEDB.Windows
                 {
                     Genero oGenero = new Genero
                     {
-                        Id = int.Parse(TxtId.Text),
+                        //Id = int.Parse(TxtId.Text),
                         Nome = TxtNome.Text
                     };
 
