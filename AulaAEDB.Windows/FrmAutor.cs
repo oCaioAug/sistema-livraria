@@ -129,7 +129,7 @@ namespace AulaAEDB.Windows
                     try
                     {
                         Autor.Alterar(oAutor);
-                        MessageBox.Show("Autor alterado com sucesso", ProductName, MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        //MessageBox.Show("Autor alterado com sucesso", ProductName, MessageBoxButtons.OK, MessageBoxIcon.Information);
                         LimpaControles();
                         CarregaGrid();
                     }
