@@ -62,5 +62,19 @@ namespace AulaAEDB.Windows
         {
             MnuAutor_Click(sender, e);
         }
+
+        private void MnuEditora_Click(object sender, EventArgs e)
+        {
+            FrmEditora oFrmEditora = new FrmEditora(MnuEditora, MnuSEditora);
+            oFrmEditora.MdiParent = this;
+            MnuEditora.Enabled = false;
+            MnuSEditora.Enabled = false;
+            oFrmEditora.Show();
+        }
+
+        private void MnuSEditora_Click(object sender, EventArgs e)
+        {
+            MnuEditora_Click(sender, e);
+        }
     }
 }

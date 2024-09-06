@@ -54,3 +54,4 @@ C:\Users\pc\source\repos\AulaAEDB\AulaAEDB.Windows\bin\Debug\net8.0-windows\runt
 C:\Users\pc\source\repos\AulaAEDB\AulaAEDB.Windows\obj\Debug\net8.0-windows\AulaAEDB.Windows.csproj.AssemblyReference.cache
 C:\Users\pc\source\repos\AulaAEDB\AulaAEDB.Windows\obj\Debug\net8.0-windows\AulaAEDB.Windows.sourcelink.json
 C:\Users\pc\source\repos\AulaAEDB\AulaAEDB.Windows\obj\Debug\net8.0-windows\AulaAEDB.6082DE74.Up2Date
+C:\Users\pc\source\repos\AulaAEDB\AulaAEDB.Windows\obj\Debug\net8.0-windows\AulaAEDB.Windows.FrmEditora.resources
