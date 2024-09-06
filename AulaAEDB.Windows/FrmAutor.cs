@@ -69,18 +69,18 @@ namespace AulaAEDB.Windows
                 TxtNome.Focus();
                 return false;
             }
-            else if (TxtId.Text.Trim() == "")
-            {
-                MessageBox.Show("O código é obrigatório", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                TxtId.Focus();
-                return false;
-            }
-            else if (!int.TryParse(TxtId.Text, out Id))
-            {
-                MessageBox.Show("Código inválido", ProductName, MessageBoxButtons.OK, MessageBoxIcon.Error);
-                TxtId.Focus();
-                return false;
-            }
+            //else if (TxtId.Text.Trim() == "")
+            //{
+            //    MessageBox.Show("O código é obrigatório", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            //    TxtId.Focus();
+            //    return false;
+            //}
+            //else if (!int.TryParse(TxtId.Text, out Id))
+            //{
+            //    MessageBox.Show("Código inválido", ProductName, MessageBoxButtons.OK, MessageBoxIcon.Error);
+            //    TxtId.Focus();
+            //    return false;
+            //}
 
             return true;
         }
@@ -101,14 +101,14 @@ namespace AulaAEDB.Windows
                     //Incluir Autor na lista
                     Autor oAutor = new Autor
                     {
-                        Id = int.Parse(TxtId.Text),
+                        //Id = int.Parse(TxtId.Text),
                         Nome = TxtNome.Text
                     };
 
                     try
                     {
                         oAutor.Incluir();
-                        MessageBox.Show("Autor incluído com sucesso", ProductName, MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        //MessageBox.Show("Autor incluído com sucesso", ProductName, MessageBoxButtons.OK, MessageBoxIcon.Information);
                         LimpaControles();
                         CarregaGrid();
                     }

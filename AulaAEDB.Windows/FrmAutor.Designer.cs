@@ -66,6 +66,7 @@
             // 
             // TxtId
             // 
+            TxtId.Enabled = false;
             TxtId.Location = new Point(12, 31);
             TxtId.Name = "TxtId";
             TxtId.Size = new Size(48, 23);
