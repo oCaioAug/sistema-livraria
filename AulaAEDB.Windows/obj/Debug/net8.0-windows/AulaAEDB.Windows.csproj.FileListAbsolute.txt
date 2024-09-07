@@ -55,3 +55,6 @@ C:\Users\pc\source\repos\AulaAEDB\AulaAEDB.Windows\obj\Debug\net8.0-windows\Aula
 C:\Users\pc\source\repos\AulaAEDB\AulaAEDB.Windows\obj\Debug\net8.0-windows\AulaAEDB.Windows.sourcelink.json
 C:\Users\pc\source\repos\AulaAEDB\AulaAEDB.Windows\obj\Debug\net8.0-windows\AulaAEDB.6082DE74.Up2Date
 C:\Users\pc\source\repos\AulaAEDB\AulaAEDB.Windows\obj\Debug\net8.0-windows\AulaAEDB.Windows.FrmEditora.resources
+C:\Users\pc\source\repos\AulaAEDB\AulaAEDB.Windows\obj\Debug\net8.0-windows\AulaAEDB.Windows.FrmIdioma.resources
+C:\Users\pc\source\repos\AulaAEDB\AulaAEDB.Windows\obj\Debug\net8.0-windows\AulaAEDB.Windows.FrmLivros.resources
+C:\Users\pc\source\repos\AulaAEDB\AulaAEDB.Windows\obj\Debug\net8.0-windows\AulaAEDB.Windows.FrmUsuarios.resources

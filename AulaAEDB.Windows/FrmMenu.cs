@@ -76,5 +76,28 @@ namespace AulaAEDB.Windows
         {
             MnuEditora_Click(sender, e);
         }
+
+        private void MnuIdioma_Click(object sender, EventArgs e)
+        {
+            FrmIdioma oFrmIdioma = new FrmIdioma(MnuIdioma, MnuSIdioma);
+            oFrmIdioma.MdiParent = this;
+            MnuIdioma.Enabled = false;
+            MnuSIdioma.Enabled = false;
+            oFrmIdioma.Show();
+        }
+
+        private void MnuSIdioma_Click(object sender, EventArgs e)
+        {
+            MnuIdioma_Click(sender, e);
+        }
+
+        private void MnuLivro_Click(object sender, EventArgs e)
+        {
+            FrmLivros oFrmLivros = new FrmLivros(MnuLivro, MnuSLivro);
+            oFrmLivros.MdiParent = this;
+            MnuLivro.Enabled = false;
+            MnuSLivro.Enabled = false;
+            oFrmLivros.Show();
+        }
     }
 }
