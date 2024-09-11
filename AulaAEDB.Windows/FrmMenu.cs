@@ -104,5 +104,13 @@ namespace AulaAEDB.Windows
         {
             MnuLivro_Click(sender, e);
         }
+
+        private void MnuUsuarios_Click(object sender, EventArgs e)
+        {
+            FrmUsuarios oFrmUsuarios = new FrmUsuarios(MnuUsuarios);
+            oFrmUsuarios.MdiParent = this;
+            MnuUsuarios.Enabled = false;
+            oFrmUsuarios.Show();
+        }
     }
 }
