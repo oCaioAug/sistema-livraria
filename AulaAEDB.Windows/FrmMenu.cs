@@ -99,5 +99,10 @@ namespace AulaAEDB.Windows
             MnuSLivro.Enabled = false;
             oFrmLivros.Show();
         }
+
+        private void MnuSLivro_Click(object sender, EventArgs e)
+        {
+            MnuLivro_Click(sender, e);
+        }
     }
 }

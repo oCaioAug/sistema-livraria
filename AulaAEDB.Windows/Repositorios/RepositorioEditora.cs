@@ -3,8 +3,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using AulaAEDB.Windows.Models;
 using AulaAEDB.Windows.Interfaces;
+using AulaAEDB.Windows.Model;
 
 namespace AulaAEDB.Windows.Repositorios
 {
@@ -31,6 +31,16 @@ namespace AulaAEDB.Windows.Repositorios
         }
 
         public Editora ObterPorId(int id)
+        {
+            throw new NotImplementedException();
+        }
+
+        List<Editora> IRepositorioEditora.Listar()
+        {
+            throw new NotImplementedException();
+        }
+
+        Editora IRepositorioEditora.ObterPorId(int id)
         {
             throw new NotImplementedException();
         }

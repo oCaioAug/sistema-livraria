@@ -2,7 +2,7 @@ using AulaAEDB.Windows.Helper;
 using Microsoft.Data.SqlClient;
 using System;
 
-namespace AulaAEDB.Windows.Models
+namespace AulaAEDB.Windows.Model
 {
     public class Editora
     {

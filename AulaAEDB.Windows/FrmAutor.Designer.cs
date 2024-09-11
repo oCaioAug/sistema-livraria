@@ -75,6 +75,7 @@
             // TxtNome
             // 
             TxtNome.Location = new Point(84, 31);
+            TxtNome.MaxLength = 50;
             TxtNome.Name = "TxtNome";
             TxtNome.Size = new Size(393, 23);
             TxtNome.TabIndex = 8;
