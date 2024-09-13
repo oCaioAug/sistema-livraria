@@ -126,18 +126,25 @@ namespace AulaAEDB.Windows
                 }
                 else if (GrdItens.Columns[e.ColumnIndex].Name == "BtnExcluir")
                 {
-                    if (MessageBox.Show("Deseja realmente excluir?", ProductName, MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                    if (Livro.SelecionaLivroPorEditora(oSelecionado.Id).Count() > 0)
                     {
-                        try
+                        MessageBox.Show("Editora não pode ser excluída, pois já está vinculada a um livro.", ProductName, MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
+                    else
+                    {
+                        if (MessageBox.Show("Deseja realmente excluir?", ProductName, MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
                         {
-                            Editora oEditora = Editora.Seleciona(oSelecionado.Id);
-                            oEditora.Excluir();
-                            LimpaControles();
-                            CarregaGrid();
-                        }
-                        catch (Exception ex)
-                        {
-                            MessageBox.Show(ex.Message, ProductName, MessageBoxButtons.OK, MessageBoxIcon.Error);
+                            try
+                            {
+                                Editora oEditora = Editora.Seleciona(oSelecionado.Id);
+                                oEditora.Excluir();
+                                LimpaControles();
+                                CarregaGrid();
+                            }
+                            catch (Exception ex)
+                            {
+                                MessageBox.Show(ex.Message, ProductName, MessageBoxButtons.OK, MessageBoxIcon.Error);
+                            }
                         }
                     }
                 }
