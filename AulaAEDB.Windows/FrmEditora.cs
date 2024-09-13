@@ -88,8 +88,8 @@ namespace AulaAEDB.Windows
                     Editora oEditora = new Editora();
                     oEditora.Nome = TxtNome.Text;
                     oEditora.Incluir();
-                    LimpaControles();
                     CarregaGrid();
+                    LimpaControles();
                 }
                 catch (Exception ex)
                 {
@@ -103,8 +103,8 @@ namespace AulaAEDB.Windows
                     Editora oEditora = Editora.Seleciona(Convert.ToInt32(TxtId.Text));
                     oEditora.Nome = TxtNome.Text;
                     oEditora.Alterar();
-                    LimpaControles();
                     CarregaGrid();
+                    LimpaControles();
                 }
                 catch (Exception ex)
                 {
@@ -138,8 +138,8 @@ namespace AulaAEDB.Windows
                             {
                                 Editora oEditora = Editora.Seleciona(oSelecionado.Id);
                                 oEditora.Excluir();
-                                LimpaControles();
                                 CarregaGrid();
+                                LimpaControles();
                             }
                             catch (Exception ex)
                             {

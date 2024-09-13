@@ -71,18 +71,6 @@ namespace AulaAEDB.Windows
                 TxtNome.Focus();
                 return false;
             }
-            //else if (TxtId.Text.Trim() == "")
-            //{
-            //    MessageBox.Show("Campo é de preenchimento obrigatório!", ProductName, MessageBoxButtons.OK, MessageBoxIcon.Error);
-            //    TxtId.Focus();
-            //    return false;
-            //}
-            //else if (int.TryParse(TxtId.Text, out Id) == false)
-            //{
-            //    MessageBox.Show("Código inválido", ProductName, MessageBoxButtons.OK, MessageBoxIcon.Error);
-            //    TxtId.Focus();
-            //    return false;
-            //}
 
             return true;
         }
@@ -102,11 +90,9 @@ namespace AulaAEDB.Windows
                 {
                     Genero oGenero = new Genero
                     {
-                        //Id = int.Parse(TxtId.Text),
                         Nome = TxtNome.Text
                     };
 
-                    //Genero.IncluirGeneroEstatico(oGenero);
                     try
                     {
                         oGenero.Incluir();
@@ -123,8 +109,6 @@ namespace AulaAEDB.Windows
                 else
                 {
                     //Altera o genero selecionado
-
-
                     Genero oGenero = new Genero
                     {
                         Id = int.Parse(TxtId.Text),
@@ -168,12 +152,19 @@ namespace AulaAEDB.Windows
                 }
                 else if (GrdItens.Columns[e.ColumnIndex].Name == "BtnExcluir")
                 {
-                    if (MessageBox.Show("Confirme a Exclusão.", ProductName, MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                    if (Livro.SelecionaLivroPorGenero(objSelecionado.Id).Count > 0)
                     {
-                        objSelecionado.Excluir();
-                        CarregaGrid();
+                        MessageBox.Show("Existem livros cadastrados com este gênero.", ProductName, MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        return;
                     }
-
+                    else
+                    {
+                        if (MessageBox.Show("Confirme a Exclusão.", ProductName, MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                        {
+                            objSelecionado.Excluir();
+                            CarregaGrid();
+                        }
+                    }
                 }
             }
         }

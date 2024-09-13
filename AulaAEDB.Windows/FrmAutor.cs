@@ -109,8 +109,8 @@ namespace AulaAEDB.Windows
                     {
                         oAutor.Incluir();
                         //MessageBox.Show("Autor incluído com sucesso", ProductName, MessageBoxButtons.OK, MessageBoxIcon.Information);
-                        LimpaControles();
                         CarregaGrid();
+                        LimpaControles();
                     }
                     catch (Exception ex)
                     {
