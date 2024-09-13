@@ -166,17 +166,16 @@ namespace AulaAEDB.Windows
                     {
                         if (MessageBox.Show("Confirme a Exclusão.", ProductName, MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
                         {
-
-                            objSelecionado.Excluir();
-                            CarregaGrid();
+                            try
+                            {
+                                objSelecionado.Excluir();
+                                CarregaGrid();
+                            } catch (Exception ex)
+                            {
+                                MessageBox.Show(ex.Message, ProductName, MessageBoxButtons.OK, MessageBoxIcon.Error);
+                            }
                         }
                     }
-                    //if (MessageBox.Show("Confirme a Exclusão.", ProductName, MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
-                    //{
-
-                    //    //objSelecionado.Excluir();
-                    //    CarregaGrid();
-                    //}
 
                 }
             }
