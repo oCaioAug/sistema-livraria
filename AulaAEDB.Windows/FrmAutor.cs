@@ -130,8 +130,8 @@ namespace AulaAEDB.Windows
                     {
                         Autor.Alterar(oAutor);
                         //MessageBox.Show("Autor alterado com sucesso", ProductName, MessageBoxButtons.OK, MessageBoxIcon.Information);
-                        LimpaControles();
                         CarregaGrid();
+                        LimpaControles();   
                     }
                     catch (Exception ex)
                     {
@@ -158,11 +158,25 @@ namespace AulaAEDB.Windows
                 }
                 else if (GrdItens.Columns[e.ColumnIndex].Name == "BtnExcluir")
                 {
-                    if (MessageBox.Show("Confirme a Exclusão.", ProductName, MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                    if (Livro.SelecionaLivroPorAutor(objSelecionado.Id).Count() > 0)
                     {
-                        objSelecionado.Excluir();
-                        CarregaGrid();
+                        MessageBox.Show("Autor não pode ser excluído, pois já está vinculado a um livro.", ProductName, MessageBoxButtons.OK, MessageBoxIcon.Error);
                     }
+                    else
+                    {
+                        if (MessageBox.Show("Confirme a Exclusão.", ProductName, MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                        {
+
+                            objSelecionado.Excluir();
+                            CarregaGrid();
+                        }
+                    }
+                    //if (MessageBox.Show("Confirme a Exclusão.", ProductName, MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                    //{
+
+                    //    //objSelecionado.Excluir();
+                    //    CarregaGrid();
+                    //}
 
                 }
             }

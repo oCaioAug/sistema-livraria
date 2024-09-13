@@ -48,7 +48,7 @@ namespace AulaAEDB.Windows.Model
                     });
                 }
                 oDr.Close();
-                Console.WriteLine(Retorno);
+
                 return Retorno;
             }
         }
@@ -81,6 +81,39 @@ namespace AulaAEDB.Windows.Model
 
                 return Retorno;
             }
+        }
+
+        public static List<Livro> SelecionaLivroPorAutor(int idAutor)
+        {
+            using (var ocn = DataHelper.Conexao())
+            {
+                string sql = $"SELECT * FROM Livro WHERE idAutor={idAutor}";
+                SqlCommand oCmd = new SqlCommand(sql, ocn);
+                SqlDataReader oDr = oCmd.ExecuteReader();
+
+                List<Livro> Retorno = new List<Livro>();
+
+                while(oDr.Read())
+                {
+                    Retorno.Add(new Livro
+                    {
+                        Id = oDr.GetInt32(oDr.GetOrdinal("id")),
+                        Nome = oDr.GetString(oDr.GetOrdinal("Nome")),
+                        Descricao = oDr.GetString(oDr.GetOrdinal("Descricao")),
+                        ISBN = oDr.GetString(oDr.GetOrdinal("ISBN")),
+                        QtdPaginas = oDr.GetInt32(oDr.GetOrdinal("qtdPaginas")),
+                        Edicao = oDr.GetInt32(oDr.GetOrdinal("Edicao")),
+                        Autor = Autor.Seleciona(oDr.GetInt32(oDr.GetOrdinal("idAutor"))),
+                        Editora = Editora.Seleciona(oDr.GetInt32(oDr.GetOrdinal("idEditora"))),
+                        Genero = Genero.Seleciona(oDr.GetInt32(oDr.GetOrdinal("idGenero"))),
+                        Idioma = Idioma.Seleciona(oDr.GetInt32(oDr.GetOrdinal("idIdioma")))
+                    });
+                }
+                oDr.Close();
+
+                return Retorno;
+            }
+
         }
 
         public void Incluir()
