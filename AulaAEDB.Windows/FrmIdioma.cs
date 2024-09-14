@@ -116,12 +116,19 @@ namespace AulaAEDB.Windows
                 }
                 else if (GrdItens.Columns[e.ColumnIndex].Name == "BtnExcluir")
                 {
-                    if (MessageBox.Show("Confirme a Exclusão.", ProductName, MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                    if (Livro.SelecionaLivroPorIdioma(objSelecionado.Id).Count() > 0)
                     {
-                        objSelecionado.Excluir();
-                        CarregaGrid();
+                        MessageBox.Show("Idioma não pôde ser exluído, pois existem livros cadastrados com este Idioma.", ProductName, MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        return;
                     }
-
+                    else
+                    {
+                        if (MessageBox.Show("Confirme a Exclusão.", ProductName, MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                        {
+                            objSelecionado.Excluir();
+                            CarregaGrid();
+                        }
+                    }
                 }
             }
         }

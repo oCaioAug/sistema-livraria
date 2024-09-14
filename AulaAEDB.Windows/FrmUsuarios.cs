@@ -104,8 +104,8 @@ namespace AulaAEDB.Windows
                 try
                 {
                     oUsuario.Incluir();
-                    LimpaControles();
                     CarregaGrid();
+                    LimpaControles();
                 } catch (Exception ex)
                 {
                     MessageBox.Show(ex.Message, ProductName, MessageBoxButtons.OK, MessageBoxIcon.Error);
@@ -123,8 +123,8 @@ namespace AulaAEDB.Windows
                 try
                 {
                     oUsuario.Alterar();
-                    LimpaControles();
                     CarregaGrid();
+                    LimpaControles();
                 } catch (Exception ex)
                 {
                     MessageBox.Show(ex.Message, ProductName, MessageBoxButtons.OK, MessageBoxIcon.Error);
