@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("AulaAEDB.Windows")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+f69b7e4b6f17c32ba29bd8b758ebfd5dac951abc")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+61217e6c0667b4b270973fab4c78afc889a49cb5")]
 [assembly: System.Reflection.AssemblyProductAttribute("AulaAEDB.Windows")]
 [assembly: System.Reflection.AssemblyTitleAttribute("AulaAEDB.Windows")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

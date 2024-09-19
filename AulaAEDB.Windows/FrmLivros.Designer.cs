@@ -78,7 +78,7 @@
             GrdItens.Location = new Point(0, 197);
             GrdItens.Name = "GrdItens";
             GrdItens.Size = new Size(1530, 343);
-            GrdItens.TabIndex = 0;
+            GrdItens.TabIndex = 11;
             GrdItens.CellClick += GrdItens_CellClick;
             GrdItens.CellFormatting += GrdItens_CellFormatting;
             // 
@@ -154,13 +154,13 @@
             // CmbAutor
             // 
             CmbAutor.AllowDrop = true;
-            CmbAutor.AutoCompleteMode = AutoCompleteMode.Suggest;
-            CmbAutor.AutoCompleteSource = AutoCompleteSource.ListItems;
+            CmbAutor.AutoCompleteSource = AutoCompleteSource.CustomSource;
+            CmbAutor.DropDownStyle = ComboBoxStyle.DropDownList;
             CmbAutor.FormattingEnabled = true;
             CmbAutor.Location = new Point(29, 117);
             CmbAutor.Name = "CmbAutor";
             CmbAutor.Size = new Size(121, 23);
-            CmbAutor.TabIndex = 1;
+            CmbAutor.TabIndex = 3;
             // 
             // TxtId
             // 
@@ -176,7 +176,7 @@
             TxtNome.MaxLength = 50;
             TxtNome.Name = "TxtNome";
             TxtNome.Size = new Size(386, 23);
-            TxtNome.TabIndex = 3;
+            TxtNome.TabIndex = 0;
             // 
             // TxtISBN
             // 
@@ -184,7 +184,7 @@
             TxtISBN.MaxLength = 20;
             TxtISBN.Name = "TxtISBN";
             TxtISBN.Size = new Size(156, 23);
-            TxtISBN.TabIndex = 4;
+            TxtISBN.TabIndex = 2;
             // 
             // TxtDescricao
             // 
@@ -192,7 +192,7 @@
             TxtDescricao.MaxLength = 50;
             TxtDescricao.Name = "TxtDescricao";
             TxtDescricao.Size = new Size(372, 23);
-            TxtDescricao.TabIndex = 5;
+            TxtDescricao.TabIndex = 1;
             // 
             // LblAutor
             // 
@@ -250,11 +250,12 @@
             // 
             // CmbGenero
             // 
+            CmbGenero.DropDownStyle = ComboBoxStyle.DropDownList;
             CmbGenero.FormattingEnabled = true;
             CmbGenero.Location = new Point(156, 118);
             CmbGenero.Name = "CmbGenero";
             CmbGenero.Size = new Size(121, 23);
-            CmbGenero.TabIndex = 11;
+            CmbGenero.TabIndex = 4;
             // 
             // LblEditora
             // 
@@ -267,11 +268,12 @@
             // 
             // CmbEditora
             // 
+            CmbEditora.DropDownStyle = ComboBoxStyle.DropDownList;
             CmbEditora.FormattingEnabled = true;
             CmbEditora.Location = new Point(283, 117);
             CmbEditora.Name = "CmbEditora";
             CmbEditora.Size = new Size(121, 23);
-            CmbEditora.TabIndex = 13;
+            CmbEditora.TabIndex = 5;
             // 
             // LblIdioma
             // 
@@ -284,18 +286,19 @@
             // 
             // CmbIdioma
             // 
+            CmbIdioma.DropDownStyle = ComboBoxStyle.DropDownList;
             CmbIdioma.FormattingEnabled = true;
             CmbIdioma.Location = new Point(410, 118);
             CmbIdioma.Name = "CmbIdioma";
             CmbIdioma.Size = new Size(121, 23);
-            CmbIdioma.TabIndex = 15;
+            CmbIdioma.TabIndex = 6;
             // 
             // BtnSalvar
             // 
             BtnSalvar.Location = new Point(918, 116);
             BtnSalvar.Name = "BtnSalvar";
             BtnSalvar.Size = new Size(75, 23);
-            BtnSalvar.TabIndex = 17;
+            BtnSalvar.TabIndex = 9;
             BtnSalvar.Text = "&Salvar";
             BtnSalvar.UseVisualStyleBackColor = true;
             BtnSalvar.Click += BtnSalvar_Click;
@@ -305,7 +308,7 @@
             BtnFechar.Location = new Point(1000, 117);
             BtnFechar.Name = "BtnFechar";
             BtnFechar.Size = new Size(75, 23);
-            BtnFechar.TabIndex = 18;
+            BtnFechar.TabIndex = 10;
             BtnFechar.Text = "&Fechar";
             BtnFechar.UseVisualStyleBackColor = true;
             BtnFechar.Click += BtnFechar_Click;
@@ -315,14 +318,14 @@
             TxtQtdPaginas.Location = new Point(537, 118);
             TxtQtdPaginas.Name = "TxtQtdPaginas";
             TxtQtdPaginas.Size = new Size(100, 23);
-            TxtQtdPaginas.TabIndex = 19;
+            TxtQtdPaginas.TabIndex = 7;
             // 
             // TxtEdicao
             // 
             TxtEdicao.Location = new Point(643, 118);
             TxtEdicao.Name = "TxtEdicao";
             TxtEdicao.Size = new Size(100, 23);
-            TxtEdicao.TabIndex = 20;
+            TxtEdicao.TabIndex = 8;
             // 
             // LblQtdPaginas
             // 

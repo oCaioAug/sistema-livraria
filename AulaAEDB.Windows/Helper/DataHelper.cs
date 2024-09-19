@@ -17,7 +17,7 @@ namespace AulaAEDB.Windows.Helper
         public static SqlConnection Conexao()
         {
             //return new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\aluno\source\repos\AulaAEDB\AulaAEDB.Windows\AulaAEDB.Windows\AulaAEDB.mdf;Integrated Security=True");
-            SqlConnection oCn = new SqlConnection("Data Source=localhost;Initial Catalog=Livraria;User ID=sa;Password=#sqlServerdocker;Connect Timeout=30;Encrypt=True;Trust Server Certificate=True;Application Intent=ReadWrite;Multi Subnet Failover=False");
+            SqlConnection oCn = new SqlConnection("Data Source=localhost;Initial Catalog=LIVRARIA_2;User ID=sa;Password=#sqlServerdocker;Connect Timeout=30;Encrypt=True;Trust Server Certificate=True;Application Intent=ReadWrite;Multi Subnet Failover=False");
             oCn.Open();
             
             return oCn;

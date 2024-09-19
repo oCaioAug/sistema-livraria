@@ -122,7 +122,6 @@ namespace AulaAEDB.Windows
                         LimpaControles();
                         CarregaGrid();
                         Incluir = true;
-                        TxtId.Enabled = true;
                     }
                     catch (Exception ex)
                     {
