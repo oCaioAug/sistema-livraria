@@ -1,0 +1,84 @@
+--CREATE DATABASE LIVRARIA_2
+--USE LIVRARIA_2
+
+CREATE TABLE Idioma (
+  id INTEGER CHECK (id > 0) NOT NULL IDENTITY,
+  Nome VARCHAR(50) NOT NULL,
+  PRIMARY KEY(id)
+);
+CREATE TABLE Genero (
+  id INTEGER CHECK (id > 0) NOT NULL IDENTITY,
+  Nome VARCHAR(50) NOT NULL,
+  PRIMARY KEY(id)
+); 
+CREATE TABLE Usuario (
+  id INTEGER CHECK (id > 0) NOT NULL IDENTITY,
+  Nome VARCHAR(50) NOT NULL,
+  Email VARCHAR(50) NOT NULL,
+  Senha VARCHAR(50) NOT NULL,
+  PRIMARY KEY(id)
+);
+CREATE TABLE Pessoa (
+  id INTEGER CHECK (id > 0) NOT NULL IDENTITY,
+  Nome VARCHAR(50) NOT NULL,
+  PRIMARY KEY(id)
+); 
+CREATE TABLE Configuracao (
+  id INTEGER NOT NULL IDENTITY,
+  qtdDiasEmprestimo INTEGER NOT NULL,
+  valorDiariasAtraso FLOAT NOT NULL,
+  PRIMARY KEY(id)
+); 
+CREATE TABLE Autor (
+  id INTEGER CHECK (id > 0) NOT NULL IDENTITY,
+  Nome VARCHAR(50) NOT NULL,
+  PRIMARY KEY(id)
+); 
+CREATE TABLE Editora (
+  id INTEGER CHECK (id > 0) NOT NULL IDENTITY,
+  Nome VARCHAR(50) NOT NULL,
+  PRIMARY KEY(id)
+); 
+CREATE TABLE Emprestimo (
+  id INTEGER NOT NULL IDENTITY,
+  idPessoa INTEGER CHECK (idPessoa > 0) NOT NULL,
+  dataSaida DATE NOT NULL,
+  dataPrevistaEntrega DATE NOT NULL,
+  PRIMARY KEY(id),
+  FOREIGN KEY(idPessoa) REFERENCES Pessoa(id) ON DELETE NO ACTION ON UPDATE NO ACTION
+); 
+CREATE INDEX Emprestimo_FKIndex1 ON Emprestimo(idPessoa); 
+CREATE TABLE Livro (
+  id INTEGER CHECK (id > 0) NOT NULL IDENTITY,
+  idAutor INTEGER CHECK (idAutor > 0) NOT NULL,
+  idEditora INTEGER CHECK (idEditora > 0) NOT NULL,
+  idIdioma INTEGER CHECK (idIdioma > 0) NOT NULL,
+  idGenero INTEGER CHECK (idGenero > 0) NOT NULL,
+  ISBN VARCHAR(20) NOT NULL,
+  Nome VARCHAR(50) NOT NULL,
+  Descricao VARCHAR(120) NOT NULL,
+  Edicao INTEGER NOT NULL,
+  qtdPaginas INTEGER NOT NULL,
+  PRIMARY KEY(id),
+  INDEX Livro_FKIndex1(idGenero),
+  INDEX Livro_FKIndex2(idEditora),
+  INDEX Livro_FKIndex4(idIdioma),
+  FOREIGN KEY(idGenero) REFERENCES Genero(id) ON DELETE NO ACTION ON UPDATE NO ACTION,
+  FOREIGN KEY(idEditora) REFERENCES Editora(id)  ON DELETE NO ACTION ON UPDATE NO ACTION,
+  FOREIGN KEY(idIdioma) REFERENCES dbo.Idioma(id) ON DELETE NO ACTION ON UPDATE NO ACTION,
+  FOREIGN KEY(idAutor) REFERENCES dbo.Autor(id) ON DELETE NO ACTION ON UPDATE NO ACTION
+);
+ 
+CREATE TABLE LivroEmprestado (
+  idLivro INTEGER CHECK (idLivro > 0) NOT NULL,
+  idEmprestimo INTEGER NOT NULL,
+  dataEntrega DATE NULL,
+  diasAtraso INTEGER NULL,
+  valorMulta FLOAT NULL,
+  valorPago FLOAT NULL,
+  PRIMARY KEY(idLivro, idEmprestimo),
+  FOREIGN KEY(idLivro)  REFERENCES Livro(id) ON DELETE NO ACTION ON UPDATE NO ACTION,
+  FOREIGN KEY(idEmprestimo) REFERENCES Emprestimo(id) ON DELETE NO ACTION ON UPDATE NO ACTION
+);
+CREATE INDEX Livro_has_Emprestimo_FKIndex1 ON LivroEmprestado(idLivro);
+CREATE INDEX Livro_has_Emprestimo_FKIndex2 ON LivroEmprestado(idEmprestimo);

@@ -95,7 +95,7 @@
             BtnSalvar.Location = new Point(795, 47);
             BtnSalvar.Name = "BtnSalvar";
             BtnSalvar.Size = new Size(75, 23);
-            BtnSalvar.TabIndex = 1;
+            BtnSalvar.TabIndex = 3;
             BtnSalvar.Text = "&Salvar";
             BtnSalvar.UseVisualStyleBackColor = true;
             BtnSalvar.Click += BtnSalvar_Click;
@@ -105,7 +105,7 @@
             BtnFechar.Location = new Point(876, 47);
             BtnFechar.Name = "BtnFechar";
             BtnFechar.Size = new Size(75, 23);
-            BtnFechar.TabIndex = 2;
+            BtnFechar.TabIndex = 4;
             BtnFechar.Text = "&Fechar";
             BtnFechar.UseVisualStyleBackColor = true;
             BtnFechar.Click += BtnFechar_Click;
@@ -143,7 +143,7 @@
             TxtNome.MaxLength = 50;
             TxtNome.Name = "TxtNome";
             TxtNome.Size = new Size(379, 23);
-            TxtNome.TabIndex = 6;
+            TxtNome.TabIndex = 0;
             // 
             // TxtEmail
             // 
@@ -151,7 +151,7 @@
             TxtEmail.MaxLength = 50;
             TxtEmail.Name = "TxtEmail";
             TxtEmail.Size = new Size(379, 23);
-            TxtEmail.TabIndex = 8;
+            TxtEmail.TabIndex = 2;
             // 
             // LblEmail
             // 
@@ -168,7 +168,7 @@
             TxtSenha.MaxLength = 50;
             TxtSenha.Name = "TxtSenha";
             TxtSenha.Size = new Size(147, 23);
-            TxtSenha.TabIndex = 10;
+            TxtSenha.TabIndex = 1;
             // 
             // LblSenha
             // 
